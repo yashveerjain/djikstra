@@ -8,7 +8,7 @@ ENPM661 Project 2
 
 ## Instruction 
 * run
-> python3 djikstra_yashveer_jain.py --start_pos 6 6 --goal_pos 550 225
+> python3 dijkstra_yashveer_jain.py --start_pos 6 6 --goal_pos 550 225
 * output
 ```
 Start Pos recieved :  [6, 6]
