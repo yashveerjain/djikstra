@@ -1,3 +1,7 @@
+"""
+https://github.com/yashveerjain/djikstra
+"""
+
 import cv2
 import numpy as np
 import os
@@ -36,10 +40,11 @@ class Djikstra():
             print("please enter node again, as it is coinciding with the obstacles")
             sys.exit(1)
 
+        cv2.imwrite("map.png", self.map)
         self.map = cv2.circle(self.map,self.start_pos,3,(0,255,0),2)
         self.map = cv2.circle(self.map,self.goal_pos,3,(0,0,255),2)
 
-        cv2.imwrite("map.png", self.map)
+        cv2.imwrite("map_st_gl.png", self.map)
 
         # Djikstra variables initialization
         self.node_state = queue.PriorityQueue()
@@ -314,9 +319,9 @@ class Djikstra():
         # Below VideoWriter object will create
         # a frame of above defined The output 
         # is stored in 'filename.avi' file.
-        result = cv2.VideoWriter('plot_search.avi', 
+        result = cv2.VideoWriter('node_exploration.avi', 
                                 cv2.VideoWriter_fourcc(*'MJPG'),
-                                180, size)
+                                180*8, size)
         
         for pos in self.visited_nodes.values():
             # print(pos)

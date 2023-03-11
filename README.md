@@ -3,6 +3,9 @@ ENPM661 Project 2
 * Yashveer Jain
 * 119252864
 
+## Map
+![](map.png)
+
 ## Instruction 
 * run
 > python3 djikstra_yashveer_jain.py --start_pos 6 6 --goal_pos 550 225
@@ -17,14 +20,18 @@ Start -> goal nodes ---
 (6, 243)
 (6, 242)
 (6, 241)
-...
+.
+.
 (550, 24)
 ```
-* Output dir:
+* Output:
     - optimal_path.avi
     - map.png
-    - search.avi
+    - node_Exploration.avi
 
+* Note :
+    - uncomment line 360 for plotting whole node exploration.
+    - But it takes > 10 mins to record.
 
 ## Dependencies
 * numpy
