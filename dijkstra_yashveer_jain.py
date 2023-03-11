@@ -10,7 +10,7 @@ import sys
 import argparse
 import math
 
-class Djikstra():
+class Dijkstra():
     def __init__(self, start_pos = [0,0], goal_pos = [600,250], map_size=(250,600)) -> None:
         self.map = np.zeros(map_size)
         # map_size (H,W) = (Y axis,X axis)
@@ -353,11 +353,11 @@ if __name__ == "__main__":
     print("Start Pos recieved : ", start_pos)
     print("Goal Pos recieved : ", goal_pos)
 
-    dji = Djikstra(start_pos=start_pos, goal_pos=goal_pos)
+    dji = Dijkstra(start_pos=start_pos, goal_pos=goal_pos)
     dji.run()
 
     # uncomment this line if want to see whole djikstra search mapping
-    # dji.plot_search()
+    dji.plot_search()
     
     # this will backtrack the optimal path
     dji.plot_path()
